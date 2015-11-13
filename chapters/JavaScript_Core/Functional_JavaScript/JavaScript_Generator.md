@@ -55,11 +55,13 @@ for(let value of argumentsIterator) {
 ```
 function* fibonacci() {
   let a = 0, b = 1;
+  var c;
   //1, 2
   while(true) {
     yield a;
+    c = a + b;
     a = b;
-    b = a + b;
+    b = c;
   }
 }
 
